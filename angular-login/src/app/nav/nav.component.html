@@ -1,0 +1,72 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<div class="container" class="color">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="authenticated">
+        <!--<div class="container-fluid">-->
+            <a class="navbar-brand" routerLink="../datapage" routerLinkActive="router-link-active" ><i class="bi bi-grid"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a routerLink="../home" class="nav-link active" (click)="logout()"><i class="bi bi-box-arrow-right"></i></a>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link"><mat-icon>menu</mat-icon></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link">Galaxie</a>
+                    </li>
+                    <form class="form-inline" style="display: inline-flex;" [formGroup]="form">
+                        <input formControlName="ssearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="search">
+                        <button class="btn btn-outline my-2 my-sm-0" type="submit" (click)="Search()">Search</button>
+                    </form>
+                    <div class="right-content">
+                        <li class="nav-item" *ngIf="authenticated" (click)="logout">
+                            <a routerLink="../home" class="nav-link active" (click)="logout()"><i class="bi bi-box-arrow-right"></i></a>
+                        </li>
+                    </div>
+                  </ul>
+            </div>
+            <!--
+            <mat-icon>menu</mat-icon>
+
+            <form class="form-inline my-2 my-lg-0" style="display: inline-flex;" [formGroup]="form">
+                <input formControlName="ssearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit" (click)="Search()">Search</button>
+            </form>
+            
+            
+            <div>
+                <mat-icon>print</mat-icon>
+                <mat-icon>my_library_books</mat-icon>
+                <mat-icon >more_vert</mat-icon>
+                <mat-icon>notifications</mat-icon>
+                <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="authenticated" (click)="logout">
+                    <li class="nav-item">
+                        <a routerLink="../home" class="nav-link active" (click)="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>-->
+        <!--</div>-->
+    </nav>
+</div>
+
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<!--
+    <mat-icon>view-grid-outline</mat-icon>
+    <mat-icon>menu</mat-icon>
+    <a mat-button><mat-icon>apps</mat-icon></a>
+    <a mat-button><mat-icon>menu</mat-icon></a>
+    <span class="nav-item">Galaxie</span>
+    <mat-icon>map</mat-icon>
+    <mat-icon>more_vert</mat-icon>
+    <mat-icon>add_box</mat-icon>
+    <mat-icon>my_library_books</mat-icon>
+    <mat-icon>list</mat-icon> 
+    <a mat-button><mat-icon>print</mat-icon></a>
+    <a mat-button><mat-icon>notifications</mat-icon></a>
+-->

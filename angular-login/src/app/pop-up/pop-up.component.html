@@ -1,0 +1,68 @@
+
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+    <mat-label>Status</mat-label>
+    <input formControlName="status" type="text" matInput placeholder="Status" [(ngModel)]="status">
+    </mat-form-field>
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Solution Name</mat-label>
+        <input formControlName="solution_name" type="text" matInput placeholder="Solution Name" [(ngModel)]="solution_name" >
+    </mat-form-field>
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Solution Type</mat-label>
+        <input formControlName="solution_type" type="text" matInput placeholder="Solution Type" [(ngModel)]="solution_type" >
+    </mat-form-field>
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Solution ID</mat-label>
+        <input formControlName="solution_id" type="text" matInput placeholder="Solution ID" [(ngModel)]="solution_id" >
+    </mat-form-field>
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Devices No.</mat-label>
+        <input formControlName="devices_no" type="number" matInput placeholder="Devices No." [(ngModel)]="devices_no">
+    </mat-form-field>
+
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>City</mat-label>
+        <input formControlName="city" type="text" matInput placeholder="City" [(ngModel)]="city">
+    </mat-form-field>
+    
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <input formControlName="description" type="text" matInput placeholder="Description" [(ngModel)]="description">
+    </mat-form-field>
+    
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Created By</mat-label>
+        <input formControlName="created_by" type="text" matInput placeholder="Created By" [(ngModel)]="created_by">
+    </mat-form-field>
+    
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Version</mat-label>
+        <input formControlName="version" type="text" matInput placeholder="Version" [(ngModel)]="version">
+    </mat-form-field>
+    
+    <mat-form-field [formGroup]="form" class="example-full-width" appearance="fill">
+        <mat-label>Created On</mat-label>
+        <input formControlName="created_on" type="date" matInput placeholder="Created On" [(ngModel)]="created_on">
+    </mat-form-field>
+    <br>
+    <button class="logbut" mat-raised-button color="primary" (click)="AddSolution()" >Add Solution</button>
+
+
+    <!-- 
+        [(ngModel)]="reg_email"
+        status: String;
+        solution_name: String;
+        solution_type: String;
+        solution_id: String;
+        devices_no: Number;
+        city: String;
+        description: String;
+        created_by: String;
+        version: String;
+        created_on: Date;
+    -->

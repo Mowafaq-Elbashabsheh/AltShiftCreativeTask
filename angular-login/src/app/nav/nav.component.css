@@ -1,0 +1,46 @@
+/*.color{
+    background-color: white;
+    border-bottom: 1px inset;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.center{
+    flex: 1 .5 auto;
+}*/
+.navbar{
+    padding: 0 !important;
+    position: relative;
+}
+
+.navbar-brand{
+ width: 45px;
+ height: 45px;
+ padding:auto;
+ background-color: red;
+ text-align: center;
+ color: white !important;
+}
+
+.right-content li{
+    height:45px;
+    float: right;
+}
+
+.right-content{
+    position: absolute;
+    right: 20px;
+}
+
+.right-content img{
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    margin-top: 3px;
+    margin-left: 9px;
+}
+
+.collapse .form-inline{
+    position: absolute;
+    right: 42%;
+}

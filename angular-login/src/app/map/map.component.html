@@ -1,0 +1,55 @@
+<p *ngIf="!authenticated">{{message}}</p>
+
+<app-nav></app-nav>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        #map {
+        height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0GWhLtQyZU8W2u22f8H-e7Bod1SXBUtA&callback=initMap&v=weekly" async></script>
+    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+</body>
+    
+
+<!-- 
+<html>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        #map {
+        height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        }
+    </style>
+    
+  </head>
+  <body>
+    
+
+    
+
+    
+  </body>
+</html>
+-->

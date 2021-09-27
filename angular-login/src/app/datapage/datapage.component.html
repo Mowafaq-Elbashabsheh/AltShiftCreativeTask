@@ -1,0 +1,134 @@
+<p *ngIf="!authenticated">{{message}}</p>
+
+<app-nav></app-nav>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<div class="container" class="color" *ngIf="authenticated">
+    <nav class="navbar navbar-expand-md navbar-dark mb-4">
+        <div class="container-fluid">
+            <div>
+                <h6>Display {{count}} of {{allCount}} Solutions</h6>
+            </div>
+            <div>
+                <a mat-button (click)="addSolution()"><i class="bi bi-plus-square"></i></a>
+                <a mat-button routerLink="../map" routerLinkActive="router-link-active" ><mat-icon>map</mat-icon></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+<table mat-table [dataSource]="solution" class="mat-elevation-z8" *ngIf="authenticated">
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="solution_name">
+        <th mat-header-cell *matHeaderCellDef> solution_name </th>
+        <td mat-cell *matCellDef="let element"> {{element.solution_name}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="solution_type">
+        <th mat-header-cell *matHeaderCellDef> solution_type </th>
+        <td mat-cell *matCellDef="let element"> {{element.solution_type}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="solution_id">
+        <th mat-header-cell *matHeaderCellDef> solution_id </th>
+        <td mat-cell *matCellDef="let element"> {{element.solution_id}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="devices_no">
+          <th mat-header-cell *matHeaderCellDef> devices_no </th>
+          <td mat-cell *matCellDef="let element"> {{element.devices_no}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef> city </th>
+          <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="created_by">
+          <th mat-header-cell *matHeaderCellDef> created_by </th>
+          <td mat-cell *matCellDef="let element"> {{element.created_by}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="version">
+          <th mat-header-cell *matHeaderCellDef> version </th>
+          <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="created_on">
+          <th mat-header-cell *matHeaderCellDef> created_on </th>
+          <td mat-cell *matCellDef="let element"> {{element.created_on}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+  
+
+<!-- 
+<ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> status </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="solution_name">
+    <th mat-header-cell *matHeaderCellDef> solution_name </th>
+    <td mat-cell *matCellDef="let element"> {{element.solution_name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="solutoin_type">
+    <th mat-header-cell *matHeaderCellDef> solutoin_type </th>
+    <td mat-cell *matCellDef="let element"> {{element.solutoin_type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="solution_id">
+    <th mat-header-cell *matHeaderCellDef> solution_id </th>
+    <td mat-cell *matCellDef="let element"> {{element.solution_id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="devices_no">
+      <th mat-header-cell *matHeaderCellDef> devices_no </th>
+      <td mat-cell *matCellDef="let element"> {{element.devices_no}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> city </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="created_by">
+      <th mat-header-cell *matHeaderCellDef> created_by </th>
+      <td mat-cell *matCellDef="let element"> {{element.created_by}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="version">
+      <th mat-header-cell *matHeaderCellDef> version </th>
+      <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="created_on">
+      <th mat-header-cell *matHeaderCellDef> created_on </th>
+      <td mat-cell *matCellDef="let element"> {{element.created_on}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  -->
